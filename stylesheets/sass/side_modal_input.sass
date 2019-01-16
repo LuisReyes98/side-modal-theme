@@ -1,0 +1,25 @@
+.input__hidden
+  display: none
+  visibility: hidden
+
+#subscription_side_modal
+  &:checked
+    ~ .modal__container
+        @extend .animated
+        @extend .fadeIn
+        display: block
+        visibility: visible
+        animation-delay: 0s
+        -webkit-animation-delay: 0s
+        -moz-animation-delay: 0s
+
+        .modal__card__container   
+          @extend .animated
+          @extend .slideInRight_modal
+          visibility: visible
+          animation-delay: 0.3s
+          -webkit-animation-delay: 0.3s
+          -moz-animation-delay: 0.3s
+    ~ #page    
+      -webkit-transform: scale(.8,.8)
+      transform: scale(.8,.8)

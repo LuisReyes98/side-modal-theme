@@ -1,0 +1,2 @@
+modal__card__container
+bg-white
