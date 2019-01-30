@@ -6,25 +6,34 @@
   <div modal_container>
 
     <label for="subscription_side_modal">
-      Close me up
+      <i close_icon ></i>
     </label>
-    <div>
-      {% block modal_message %}
+
+    <h2 modal_title >
+      {% if modal_title %}
+        {{modal_title}}      
+      {% endif %}    
+    </h2>
+    <p modal_message >
+      {% block modal_custom_message %}
       
-      {% endblock modal_message %}
-    </div>
-    <h2>Hello hello</h2>
-    I am part of the message 
+      {% endblock modal_custom_message %}
+
+      {% if modal_message %}
+        {{modal_message}}
+      
+      {% endif %}
+
+    </p>
 
 
 
   </div>
-  <!-- <label modal_outside for="subscription_side_modal"></label> -->
 
 </div>
 
 <label side_button for="subscription_side_modal">  
-  <p>
+  <p>        
     Open Menu
   </p>
 </label>
