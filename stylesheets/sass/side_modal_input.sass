@@ -2,9 +2,13 @@
   display: none
   visibility: hidden
 
+#page  
+  transition: transform 1s
+
 #subscription_side_modal
   &:checked
-    ~ .modal__container
+    ~ 
+      .modal__container
         @extend .animated
         @extend .fadeIn
         display: block
@@ -13,16 +17,15 @@
         -webkit-animation-delay: 0s
         -moz-animation-delay: 0s
 
-        .modal__card__container   
-          @extend .animated
-          @extend .slideInRight_modal
-          visibility: visible
-          z-index: 60
-          animation-delay: 0.3s
-          -webkit-animation-delay: 0.3s
-          -moz-animation-delay: 0.3s
+      .modal__card__container   
+        @extend .animated
+        @extend .slideInRight_modal
+        visibility: visible
+        z-index: 60
+        animation-delay: 0.3s
+        -webkit-animation-delay: 0.3s
+        -moz-animation-delay: 0.3s
     ~ #page    
-      @extend  .transtion_300ms
       -webkit-transform: scale(.8,.8)
       -moz-transform: scale(.8,.8)
       transform: scale(.8,.8)

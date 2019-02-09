@@ -1,4 +1,4 @@
 modal__card__container
-bg-white
-p-4
+bg-grey-light
 rounded-lg
+overflow-hidden

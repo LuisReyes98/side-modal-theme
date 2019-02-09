@@ -1,0 +1,4 @@
+p-4
+shadow-md
+bg-white
+bg-grey-lightest

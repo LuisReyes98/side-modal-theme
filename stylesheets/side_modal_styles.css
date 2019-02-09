@@ -1,4 +1,4 @@
-.transtion_300ms, #subscription_side_modal:checked ~ #page {
+.transtion_300ms {
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s; }
@@ -31,31 +31,31 @@
   top: 0;
   z-index: 40;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: block;
   visibility: hidden;
   position: fixed; }
-  .modal__container .label__modal__shadow {
-    top: 0;
-    z-index: 50;
-    width: 100%;
-    height: 100%;
-    position: absolute; }
-  .modal__container .modal__card__container {
-    visibility: hidden;
-    margin-top: 20vh;
-    margin-left: 25%;
-    margin-right: 25%;
-    z-index: 60;
-    width: 50%;
-    height: auto;
-    animation-delay: 0.1s;
-    -webkit-animation-delay: 0.1s;
-    -moz-animation-delay: 0.1s; }
+
+.modal__card__container {
+  visibility: hidden;
+  position: absolute;
+  margin-top: 5rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 5rem;
+  width: 60%;
+  top: 0;
+  z-index: 60;
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s; }
 
 .input__hidden {
   display: none;
   visibility: hidden; }
+
+#page {
+  transition: transform 1s; }
 
 #subscription_side_modal:checked ~ .modal__container {
   display: block;
@@ -63,12 +63,12 @@
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s; }
-  #subscription_side_modal:checked ~ .modal__container .modal__card__container {
-    visibility: visible;
-    z-index: 60;
-    animation-delay: 0.3s;
-    -webkit-animation-delay: 0.3s;
-    -moz-animation-delay: 0.3s; }
+#subscription_side_modal:checked ~ .modal__card__container {
+  visibility: visible;
+  z-index: 60;
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s; }
 #subscription_side_modal:checked ~ #page {
   -webkit-transform: scale(0.8, 0.8);
   -moz-transform: scale(0.8, 0.8);
@@ -96,7 +96,7 @@
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
-.slideInRight_modal, #subscription_side_modal:checked ~ .modal__container .modal__card__container {
+.slideInRight_modal, #subscription_side_modal:checked ~ .modal__card__container {
   -webkit-animation-name: slideInRight_modal;
   animation-name: slideInRight_modal; }
 
@@ -1391,7 +1391,7 @@
     transform: perspective(400px) scale3d(1, 1, 1) translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in; } }
-.animated.flip, .flip.modal__container, .modal__container .flip.modal__card__container, #subscription_side_modal:checked ~ .flip.modal__container, #subscription_side_modal:checked ~ .modal__container .flip.modal__card__container {
+.animated.flip, .flip.modal__container, .flip.modal__card__container, #subscription_side_modal:checked ~ .flip.modal__container, #subscription_side_modal:checked ~ .flip.modal__card__container {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;
@@ -2193,7 +2193,7 @@
     transform: scale3d(0.3, 0.3, 0.3); }
   to {
     opacity: 0; } }
-.zoomOut, .modal__container .modal__card__container {
+.zoomOut, .modal__card__container {
   -webkit-animation-name: zoomOut;
   animation-name: zoomOut; }
 
@@ -2477,54 +2477,54 @@
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
-.animated, .modal__container, .modal__container .modal__card__container, #subscription_side_modal:checked ~ .modal__container, #subscription_side_modal:checked ~ .modal__container .modal__card__container {
+.animated, .modal__container, .modal__card__container, #subscription_side_modal:checked ~ .modal__container, #subscription_side_modal:checked ~ .modal__card__container {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
-.animated.infinite, .infinite.modal__container, .modal__container .infinite.modal__card__container, #subscription_side_modal:checked ~ .infinite.modal__container, #subscription_side_modal:checked ~ .modal__container .infinite.modal__card__container {
+.animated.infinite, .infinite.modal__container, .infinite.modal__card__container, #subscription_side_modal:checked ~ .infinite.modal__container, #subscription_side_modal:checked ~ .infinite.modal__card__container {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite; }
 
-.animated.delay-1s, .delay-1s.modal__container, .modal__container .delay-1s.modal__card__container, #subscription_side_modal:checked ~ .delay-1s.modal__container, #subscription_side_modal:checked ~ .modal__container .delay-1s.modal__card__container {
+.animated.delay-1s, .delay-1s.modal__container, .delay-1s.modal__card__container, #subscription_side_modal:checked ~ .delay-1s.modal__container, #subscription_side_modal:checked ~ .delay-1s.modal__card__container {
   -webkit-animation-delay: 1s;
   animation-delay: 1s; }
 
-.animated.delay-2s, .delay-2s.modal__container, .modal__container .delay-2s.modal__card__container, #subscription_side_modal:checked ~ .delay-2s.modal__container, #subscription_side_modal:checked ~ .modal__container .delay-2s.modal__card__container {
+.animated.delay-2s, .delay-2s.modal__container, .delay-2s.modal__card__container, #subscription_side_modal:checked ~ .delay-2s.modal__container, #subscription_side_modal:checked ~ .delay-2s.modal__card__container {
   -webkit-animation-delay: 2s;
   animation-delay: 2s; }
 
-.animated.delay-3s, .delay-3s.modal__container, .modal__container .delay-3s.modal__card__container, #subscription_side_modal:checked ~ .delay-3s.modal__container, #subscription_side_modal:checked ~ .modal__container .delay-3s.modal__card__container {
+.animated.delay-3s, .delay-3s.modal__container, .delay-3s.modal__card__container, #subscription_side_modal:checked ~ .delay-3s.modal__container, #subscription_side_modal:checked ~ .delay-3s.modal__card__container {
   -webkit-animation-delay: 3s;
   animation-delay: 3s; }
 
-.animated.delay-4s, .delay-4s.modal__container, .modal__container .delay-4s.modal__card__container, #subscription_side_modal:checked ~ .delay-4s.modal__container, #subscription_side_modal:checked ~ .modal__container .delay-4s.modal__card__container {
+.animated.delay-4s, .delay-4s.modal__container, .delay-4s.modal__card__container, #subscription_side_modal:checked ~ .delay-4s.modal__container, #subscription_side_modal:checked ~ .delay-4s.modal__card__container {
   -webkit-animation-delay: 4s;
   animation-delay: 4s; }
 
-.animated.delay-5s, .delay-5s.modal__container, .modal__container .delay-5s.modal__card__container, #subscription_side_modal:checked ~ .delay-5s.modal__container, #subscription_side_modal:checked ~ .modal__container .delay-5s.modal__card__container {
+.animated.delay-5s, .delay-5s.modal__container, .delay-5s.modal__card__container, #subscription_side_modal:checked ~ .delay-5s.modal__container, #subscription_side_modal:checked ~ .delay-5s.modal__card__container {
   -webkit-animation-delay: 5s;
   animation-delay: 5s; }
 
-.animated.fast, .fast.modal__container, .modal__container .fast.modal__card__container, #subscription_side_modal:checked ~ .fast.modal__container, #subscription_side_modal:checked ~ .modal__container .fast.modal__card__container {
+.animated.fast, .fast.modal__container, .fast.modal__card__container, #subscription_side_modal:checked ~ .fast.modal__container, #subscription_side_modal:checked ~ .fast.modal__card__container {
   -webkit-animation-duration: 800ms;
   animation-duration: 800ms; }
 
-.animated.faster, .faster.modal__container, .modal__container .faster.modal__card__container, #subscription_side_modal:checked ~ .faster.modal__container, #subscription_side_modal:checked ~ .modal__container .faster.modal__card__container {
+.animated.faster, .faster.modal__container, .faster.modal__card__container, #subscription_side_modal:checked ~ .faster.modal__container, #subscription_side_modal:checked ~ .faster.modal__card__container {
   -webkit-animation-duration: 500ms;
   animation-duration: 500ms; }
 
-.animated.slow, .slow.modal__container, .modal__container .slow.modal__card__container, #subscription_side_modal:checked ~ .slow.modal__container, #subscription_side_modal:checked ~ .modal__container .slow.modal__card__container {
+.animated.slow, .slow.modal__container, .slow.modal__card__container, #subscription_side_modal:checked ~ .slow.modal__container, #subscription_side_modal:checked ~ .slow.modal__card__container {
   -webkit-animation-duration: 2s;
   animation-duration: 2s; }
 
-.animated.slower, .slower.modal__container, .modal__container .slower.modal__card__container, #subscription_side_modal:checked ~ .slower.modal__container, #subscription_side_modal:checked ~ .modal__container .slower.modal__card__container {
+.animated.slower, .slower.modal__container, .slower.modal__card__container, #subscription_side_modal:checked ~ .slower.modal__container, #subscription_side_modal:checked ~ .slower.modal__card__container {
   -webkit-animation-duration: 3s;
   animation-duration: 3s; }
 
 @media (prefers-reduced-motion) {
-  .animated, .modal__container, .modal__container .modal__card__container, #subscription_side_modal:checked ~ .modal__container, #subscription_side_modal:checked ~ .modal__container .modal__card__container {
+  .animated, .modal__container, .modal__card__container, #subscription_side_modal:checked ~ .modal__container, #subscription_side_modal:checked ~ .modal__card__container {
     -webkit-animation: unset !important;
     animation: unset !important;
     -webkit-transition: none !important;

@@ -1,1 +1,4 @@
 my-3
+text-5xl
+text-black
+text-center

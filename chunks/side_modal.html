@@ -3,8 +3,9 @@
 <input hidden_input type="checkbox" id="subscription_side_modal">
 
 <div modal_shadow >
-  <div modal_container>
-
+</div>
+<div modal_container>
+  <div header>
     <label for="subscription_side_modal">
       <i close_icon ></i>
     </label>
@@ -14,10 +15,15 @@
         {{modal_title}}      
       {% endif %}    
     </h2>
-    <p modal_message >
-      {% block modal_custom_message %}
+  </div>
+  <div custom_message> 
+    {% block modal_custom_message %}
       
-      {% endblock modal_custom_message %}
+    {% endblock modal_custom_message %}
+
+  </div>
+  <div modal_message>
+    <p text_message >
 
       {% if modal_message %}
         {{modal_message}}
@@ -26,11 +32,12 @@
 
     </p>
 
-
-
   </div>
 
 </div>
+
+
+
 
 <label side_button for="subscription_side_modal">  
   <p>        
