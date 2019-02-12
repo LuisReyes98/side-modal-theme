@@ -11,13 +11,7 @@ modal_message = "Any string for the message"
 
 ## Custom Modal 
 if you want custom content you can create your own template that extends from this one
+you can see the example in 
 ```
-{% extends "^/chunks/side_modal.html" %}
-```
-and add your custom message in the custom message block
-```
-{% block modal_custom_message %}
-  <!-- Custom Message Goes Here-->
-
-{% endblock modal_custom_message %}
+  inherit_example.html
 ```
