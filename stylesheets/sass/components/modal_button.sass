@@ -1,0 +1,53 @@
+=sdm_fix_vertical_display($xpos,$ypos)
+  @if $xpos == "left"
+    transform-origin: bottom left    
+
+=sdm_btn_vertical($vertical,$reverse,$xpos,$ypos)
+  @if $vertical
+    +sdm_fix_vertical_display($xpos,$ypos)
+    @if $reverse
+      transform: rotateZ(90deg)    
+    @else
+      transform: rotateZ(-90deg)    
+
+=sdm_btn_position($xpos,$ypos)
+  @if $xpos == "left"
+    left: 0    
+
+  @else if $xpos == "center"
+    left: calc(50% - #{$sdm-btn-width} - 20px)
+
+  @else if $xpos == "right"
+    right: 0
+
+  @if $ypos == "top"
+    top: 0    
+
+  @else if $ypos == "center"
+    top: calc(50% - #{$sdm-btn-height} - 25px)
+
+  @else if $ypos == "bottom"
+    bottom: 0
+
+
+.side_button_modal
+  background-color: $sdm-button_color
+  color: $sdm-button_font_color
+  position: fixed
+  padding: 10px 10px 15px
+  margin: 0
+  text-align: center
+  height: $sdm-btn-height
+  width: $sdm-btn-width
+  +sdm_btn_position($sdm-btn-position-x,$sdm-btn-position-y)
+  +sdm_btn_vertical($sdm-btn-vertical,$sdm-btn-vertical-reverse,$sdm-btn-position-x,$sdm-btn-position-y)
+  
+  z-index: $sdm-btn_z
+
+  p 
+    padding: 0
+    margin: 0
+
+
+
+    

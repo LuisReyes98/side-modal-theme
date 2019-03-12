@@ -11,8 +11,8 @@
     </label>
 
     <h2 modal_title >
-      {% if modal_title %}
-        {{modal_title}}      
+      {% if side_modal.modal_title %}
+        {{side_modal.modal_title}}      
       {% endif %}    
     </h2>
   </div>
@@ -25,8 +25,8 @@
   <div modal_message>
     <p text_message >
 
-      {% if modal_message %}
-        {{modal_message}}
+      {% if side_modal.modal_message %}
+        {{side_modal.modal_message}}
       
       {% endif %}
 
@@ -40,7 +40,9 @@
 
 
 <label side_button for="subscription_side_modal">  
-  <p>        
-    Open Menu
+  <p>   
+    {% if side_modal.modal_button %}
+      {{side_modal.modal_button}}      
+    {% endif %}     
   </p>
 </label>

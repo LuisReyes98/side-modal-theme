@@ -1,24 +1,7 @@
-$primary-brown: #a99977
-$dark-brown: #a09070
-
-$light-brown:#e8bd63
-
-$primary-dark-grey: #111111
-
 .transtion_300ms
   transition: all 0.3s  //for the scale delay
   -webkit-transition: all 0.3s //for the scale delay
   -moz-transition: all 0.3s //for the scale delay    
-
-.side_button_modal
-  background-color: $light-brown
-  color: $primary-dark-grey
-  position: fixed
-  padding: 10px 10px 15px 10px
-  right: -2.6rem 
-  top: 50vh
-  z-index: 2
-  transform: rotateZ(-90deg)
 
 .modal__container
   @extend .animated
@@ -42,7 +25,7 @@ $primary-dark-grey: #111111
   background-color: rgb(0,0,0)
   background-color: rgba(0,0,0,0.3)
   top: 0
-  z-index: 40
+  z-index: $sdm-modal_shadow_z
   width: 100%
   height: 100vh
   display: block
@@ -60,7 +43,7 @@ $primary-dark-grey: #111111
   margin-bottom: 5rem 
   width: 60%
   top: 0
-  z-index: 60     
+  z-index: $sdm-modal_z    
   animation-delay: 0.1s 
   -webkit-animation-delay: 0.1s 
   -moz-animation-delay: 0.1s 
