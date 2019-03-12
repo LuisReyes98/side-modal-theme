@@ -1,6 +1,25 @@
 =sdm_fix_vertical_display($xpos,$ypos)
-  @if $xpos == "left"
-    transform-origin: bottom left    
+  @if $xpos == "left" 
+    transform-origin: bottom left  
+    @if $ypos == "top"
+      top: -#{$sdm-btn-height}    
+
+    @else if $ypos == "center"
+      top: calc(50% - #{$sdm-btn-width})
+
+    @else if $ypos == "bottom"
+      bottom: #{$sdm-btn-width}
+  
+  @else if $xpos == "right"
+    transform-origin: top right  
+    @if $ypos == "top"
+      top: #{$sdm-btn-width}    
+
+    @else if $ypos == "center"
+      top: calc(50% + #{$sdm-btn-height})
+
+    @else if $ypos == "bottom"
+      bottom: -#{$sdm-btn-height}
 
 =sdm_btn_vertical($vertical,$reverse,$xpos,$ypos)
   @if $vertical

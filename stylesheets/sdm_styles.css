@@ -73,9 +73,10 @@
   text-align: center;
   height: 45px;
   width: 180px;
-  left: 0;
+  right: 0;
   bottom: 0;
-  transform-origin: bottom left;
+  transform-origin: top right;
+  bottom: -45px;
   transform: rotateZ(90deg);
   z-index: 2; }
   .side_button_modal p {
